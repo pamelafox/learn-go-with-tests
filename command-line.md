@@ -28,7 +28,7 @@ Our project now needs to create two binaries, our existing web server and the co
 
 Before we get stuck into our new work we should structure our project to accommodate this.
 
-So far all the code has lived in one folder, in a path looking like this
+So far all the code has lived in one folder, in a path looking like this:
 
 `$GOPATH/src/github.com/your-name/my-app`
 
@@ -65,7 +65,7 @@ Change all the other code to have a package called `poker`.
 
 Finally, we need to import this package into `main.go` so we can use it to create our web server. Then we can use our library code by using `poker.FunctionName`.
 
-The paths will be different on your computer, but it should be similar to this:
+The path will be different on your computer, but it should be similar to this:
 
 ```go
 package main
@@ -102,9 +102,11 @@ func main() {
 
 The full path may seem a bit jarring, but this is how you can import _any_ publicly available library into your code.
 
-By separating our domain code into a separate package and committing it to a public repo like GitHub any Go developer can write their own code which imports that package the features we've written available. The first time you try and run it will complain it is not existing but all you need to do is run `go get`.
+By separating our domain code into a separate package and committing it to a public repo like GitHub, any Go developer can write their own code which imports that package and uses the features we've written. When you first run a Go program with an imported package, it will complain it is not existing but all you need to do is run `go get`.
 
 [In addition, users can view the documentation at godoc.org](https://godoc.org/github.com/quii/learn-go-with-tests/command-line/v1).
+
+Not 
 
 ### Final checks
 
